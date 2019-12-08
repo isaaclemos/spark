@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Copa Brasil</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="col-md-12">
+		<div class="panel with-nav-tabs panel-default">
+			<div class="panel-heading">
+				<ul class="nav nav-tabs">
+					<li><a href="/grupo">Grupo</a></li>
+					<li><a href="/time">Time</a></li>
+					<li><a href="/jogador">Jogador</a></li>
+					<li><a href="/posicao">Posicao</a></li>
+					<div class="pull-right">
+						<form action="/sair">
+							<button type="submit" class="btn btn-success">Sair</button>
+						</form>
+					</div>
+				</ul>
+			</div>
+			<div class="panel-body">
+				<div class="tab-content">

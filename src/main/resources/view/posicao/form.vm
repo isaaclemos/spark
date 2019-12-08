@@ -1,0 +1,32 @@
+#include ("view/includes/header.vm")
+<div class="container">
+	<div class="row">
+		<!-- Insert -->
+		<div class="col-md-12">
+			<form class="form-horizontal" action="/posicao/save" method="post">
+				<fieldset>
+					<!-- Form Name -->
+					<legend>$text</legend>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="nome">Nome:</label>
+						<div class="col-md-4">
+							<input class="form-control" type="text" name="nome"
+								value="$!posicao.nome">
+						</div>
+					</div>
+					<!-- Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="btn-save"></label>
+						<div class="col-md-4">
+							<button type="submit"	class="btn btn-success">Salvar</button>
+							<a href="/posicao" class="btn btn-success">Voltar</a>
+						</div>
+					</div>
+					<input type="hidden" name="id" value="$!posicao.id">
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+#include ("view/includes/footer.vm")

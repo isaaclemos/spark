@@ -1,0 +1,48 @@
+#include ("view/includes/header.vm")
+<div class="container">
+	<div class="row">
+		<!-- Insert -->
+		<div class="col-md-12">
+			<form class="form-horizontal" action="/time/save" method="post">
+				<fieldset>
+					<!-- Form Name -->
+					<legend>$text</legend>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="nome">Nome:</label>
+						<div class="col-md-4">
+							<input class="form-control" type="text" name="nome"
+								value="$!time.nome">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="idGrupo">Grupo:</label>
+						<div class="col-md-4">
+							<select class="form-control" name="idGrupo" required>
+								<option></option>
+								#foreach ($grupo in $grupos)">
+									#if($grupo.id == $time.grupo.id)
+										<option value="$grupo.id" selected>$grupo.nome</option>
+									#end
+									#if($grupo.times.size() < 4)
+										<option value="$grupo.id">$grupo.nome</option>
+									#end
+								#end
+							</select>
+						</div>
+					</div>
+					<!-- Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="btn-save"></label>
+						<div class="col-md-4">
+							<button type="submit" value="save" class="btn btn-success">Salvar</button>
+							<a href="/time" class="btn btn-success">Voltar</a>
+						</div>
+					</div>
+					<input type="hidden" name="id" value="$!time.id">
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+#include ("view/includes/footer.vm")

@@ -1,0 +1,45 @@
+#include ("view/includes/header.vm")
+<div class="tab-pane fade in active">
+	<div class="container">
+		<div class="row">
+			<div class=col-md-12>
+				<legend>Lista de Jogadores $!text</legend>
+				<div class="pull-right">
+						<a href="/jogador/insert"
+							class="btn btn-default-btn-xs btn-success"><i
+							class="glyphicon glyphicon-plus"></i> Novo</a>
+					</div>
+					<table class="table table-bordered table-condensed table-hover">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Idade</th>
+								<th>Posicao</th>
+								<th>Time</th>
+								<th>Acoes</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							#foreach ($jogador in $jogadores)
+								<tr>
+									<td>$jogador.idade</td>
+									<td>$jogador.nome</td>
+									<td>$jogador.posicao.nome</td>
+									<td>$jogador.time.nome</td>
+									<td><a href="/jogador/update/$jogador.id"><i
+											class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+										<a href="/jogador/delete/$jogador.id"><i
+											class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872;</i></a></td>
+								</tr>
+							#end
+						</tbody>
+					</table>
+			</div>
+		</div>
+	</div>
+</div>
+#if($text)
+	<script>alert($text)</script>
+#end
+#include ("view/includes/footer.vm")

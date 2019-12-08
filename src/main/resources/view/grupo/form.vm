@@ -1,0 +1,40 @@
+#include ("view/includes/header.vm")
+<div class="container">
+	<div class="row">
+		<!-- Insert -->
+		<div class="col-md-12">
+			<form class="form-horizontal" action="/grupo/save"  method="post">
+				<fieldset>
+					<!-- Form Name -->
+					<legend>$text</legend>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="nome">Nome:</label>
+						<div class="col-md-4">
+							<input class="form-control" type="text" name="nome"
+								value="$!grupo.nome">
+						</div>
+					</div>
+						<div class="form-group">
+						<label class="col-md-4 control-label" for="nome">Cidade:</label>
+						<div class="col-md-4">
+							<input class="form-control" type="text" name="cidade"
+								value="$!grupo.cidade">
+						</div>
+					</div>
+					<!-- Button -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="btn-save"></label>
+						<div class="col-md-4">
+							<button type="submit" name="action" value="save"
+								class="btn btn-success">Salvar</button>
+							<a href="/posicao" class="btn btn-success">Voltar</a>
+						</div>
+					</div>
+					<input type="hidden" name="id" value="$!grupo.id">
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+#include ("view/includes/footer.vm")

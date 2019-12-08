@@ -1,0 +1,48 @@
+#include ("view/includes/header.vm")
+<div class="tab-pane fade in active">
+	<div class="container">
+		<div class="row">
+			<div class=col-md-12>
+				<form id="form-list-client">
+					<legend>Lista de Grupos$!text</legend>
+					<div class="pull-right">
+						<a href="/grupo/insert"
+							class="btn btn-default-btn-xs btn-success"><i
+							class="glyphicon glyphicon-plus"></i> Novo</a>
+					</div>
+					<table class="table table-bordered table-condensed table-hover">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Nome</th>
+								<th>Cidade com mais jogos</th>
+								<th>Times<th> 
+								<th>Acoes</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							#foreach ($grupo in $grupos)
+								<tr>
+									<td>$!grupo.id</td>
+									<td>$!grupo.nome</td>
+									<td>$!grupo.cidade</td>
+									<td>
+										<a href="time/grupo/$!grupo.id" class="btn btn-default-btn-xs btn-success"><i class="glyphicon glyphicon-plus"></i></a>
+									</td>
+									<td>
+										<a href="grupo/update/$grupo.id"><i	class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+										<a href="grupo/delete/$grupo.id"><i class="material-icons" data-toggle="tooltip" title="Deletar">&#xE872;</i></a></td>
+								</tr>
+							#end
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+#if($text)
+	<script>alert($text)</script>
+#end
+#include ("view/includes/footer.vm")
