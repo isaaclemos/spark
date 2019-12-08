@@ -27,7 +27,7 @@ public final class TimeController {
 	private void delete() {
 		Spark.get("/time/delete/:id", (request, response) -> {
 			String id = request.params("id");
-			Grupo time = new Grupo().findById(Integer.parseInt(id));
+			Time time = new Time().findById(Integer.parseInt(id));
 			try {
 				time.delete();				
 			} catch (Exception e) {
