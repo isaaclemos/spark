@@ -29,7 +29,7 @@ Este é um aplicativo web desenvolvido em Java usando o framework [Spark](https:
 - Java 8 ou superior instalado.
 - [Maven](https://maven.apache.org/) instalado para gerenciar dependências.
 
-### Como Executar Localmente
+### Como Executar
 
 1. Clone o repositório:
    ```bash
