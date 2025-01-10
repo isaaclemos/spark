@@ -10,14 +10,12 @@
 		<class>model.Posicao</class>
 		<class>model.Grupo</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url"
-				value="jdbc:postgresql://ec2-174-129-254-220.compute-1.amazonaws.com:5432/d97cgqspjja1t6" />
+			<property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC" />
+		    <property name="javax.persistence.jdbc.url"	value="jdbc:sqlite:./db/company.db" />
 			<property name="javax.persistence.jdbc.user"
-				value="dfddijoliackab" />
+				value="" />
 			<property name="javax.persistence.jdbc.password"
-				value="c875246a6ccdb5a23928681a7802106e3659c3917a21a9de96717e231b01996e" />
-			<property name="javax.persistence.jdbc.driver"
-				value="org.postgresql.Driver" />
+				value="" />
 			<property name="eclipselink.ddl-generation"
 				value="create-tables" />
 		</properties>
