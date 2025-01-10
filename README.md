@@ -21,7 +21,6 @@ Este é um aplicativo web desenvolvido em Java usando o framework [Spark](https:
 - **Java**: Linguagem principal do projeto.
 - **Spark Framework**: Framework web leve para criar aplicativos em Java.
 - **Velocity Template Engine**: Para renderizar templates HTML dinâmicos.
-- **Heroku**: Para implantação do aplicativo.
 
 ## Configuração e Execução
 
@@ -36,4 +35,9 @@ Este é um aplicativo web desenvolvido em Java usando o framework [Spark](https:
    ```bash
    git clone https://github.com/seu-usuario/seu-repositorio.git
    cd seu-repositorio
+   
+2. Compile e execute o projeto usando o Maven:
+   ```bash
+   mvn clean install
+   mvn exec:java
 
