@@ -1,6 +1,6 @@
 # Spark Web Application
 
-Este é um aplicativo web desenvolvido em Java usando o framework [Spark](https://sparkjava.com/). Ele implementa funcionalidades básicas como autenticação de usuários, controle de sessão e gerenciamento de entidades como grupos, posições, times e jogadores.
+Este foi um aplicativo web desenvolvido em Java usando o framework [Spark](https://sparkjava.com/) feito para avaliação durante minha graduação. Ele implementa funcionalidades básicas como autenticação de usuários, controle de sessão e gerenciamento de entidades como grupos, posições, times e jogadores.
 
 ## Funcionalidades
 
